@@ -19,20 +19,18 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Theme Configuration
-theme_config:
-  site_name: "The Lab"
-  header_text: "Security research and analysis"
-  show_navigation: true
-  navigation:
-    - name: "Home"
+# Theme Settings
+header:
+  site_title: "The Lab"
+  headline: "Security research and analysis"
+  show_nav: true
+  nav:
+    - title: "Home"
       url: "/"
-    - name: "Posts"
+    - title: "Posts"
       url: "/posts/"
-    - name: "About"
+    - title: "About"
       url: "/about/"
-  social:
-    github: nickpending
 
 # Build Configuration
 markdown: kramdown
