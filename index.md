@@ -3,15 +3,8 @@ layout: default
 title: The Lab
 ---
 
-## About
-This is my workspace for security research, tool development, and technical analysis. I focus on building practical security tools, breaking down complex problems with data, and documenting interesting findings along the way.
-
-## Focus Areas
-Expect posts about:
-- Vulnerability research
-- Custom security tools
-- Technical deep-dives
-- Data analysis 
+## Welcome
+This is my workspace for security research, tool development, and technical analysis. Here you'll find documentation of my experiments, security tools I've built, and observations about interesting security issues.
 
 ## Recent Posts
 {% for post in site.posts %}
