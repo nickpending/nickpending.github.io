@@ -1,7 +1,10 @@
 # Theme Configuration
 remote_theme: tajacks/lightspeed
 title: "The Lab"
+tagline: "Security research, tools, and random observations"
 description: "Security research, tools, and random observations"
+
+# Author Configuration
 author:
   name: nickpending
   bio: "Security engineer focused on building tools and breaking things. Into data analysis, problem-solving, BJJ, philosophy, and music production."
@@ -16,11 +19,20 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Theme-specific Configuration
-theme_config:
-  appearance: "auto"  # or "dark" or "light"
-  back_home_text: "← Home"
-  date_format: "%Y-%m-%d"
+# Lightspeed Theme-specific Configuration
+lightspeed:
+  homepage:
+    title: "The Lab"
+    subtitle: "Security research and analysis"
+  header:
+    title: "The Lab"
+    nav_fields:
+      - name: "Home"
+        path: "/"
+      - name: "Posts"
+        path: "/posts/"
+      - name: "About"
+        path: "/about/"
 
 # Build Configuration
 markdown: kramdown
@@ -30,13 +42,6 @@ kramdown:
 # Social Links
 social_links:
   github: nickpending
-  # twitter: yourhandle
-  # linkedin: yourprofile
-
-# Navigation
-header_pages:
-  - about.md
-  - posts.md
 
 # Collections Configuration
 collections:
@@ -51,3 +56,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
