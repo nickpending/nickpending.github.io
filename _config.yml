@@ -18,18 +18,19 @@ author:
   name: nickpending
   bio: "Security engineer focused on building tools and breaking things. Into data analysis, problem-solving, BJJ, philosophy, and music production."
 
-# LightSpeed Theme Specific Settings
-lightspeed:
-  header:
-    name: "The Lab"
-    headline: "Security research and analysis"
-  nav:
-    - title: "Home"
-      url: "/"
-    - title: "Posts"
-      url: "/posts/"
-    - title: "About"
-      url: "/about/"
+# Header Configuration
+header:
+  title: "The Lab"
+  headline: "Security research and analysis"
+  description: "Security research, tools, and random observations"
+  
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Posts"
+    url: "/posts/"
+  - title: "About"
+    url: "/about/"
 
 # Collections Configuration
 collections:
