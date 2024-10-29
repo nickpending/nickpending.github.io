@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Welcome to My Blog
+title: "The Lab"
 ---
-
-Welcome to my blog! This is where I'll share my thoughts and experiences.
+This is my workspace for security research, tool development, and technical analysis. I focus on building practical security tools, breaking down complex problems with data, and documenting interesting findings along the way.
