@@ -4,8 +4,7 @@ title: "Hello World"
 date: 2024-10-29
 category: [meta]
 ---
-
-Welcome to my new blog! I'm excited to start sharing my work and thoughts here.
+Welcome to my new blog.
 
 ## What to Expect
 I'll be using this space to share:

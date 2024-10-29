@@ -2,9 +2,7 @@
 layout: default
 title: Posts
 ---
-
 ## All Posts
-
 {% for post in site.posts %}
   <div class="post">
     <h2 class="post-title">
