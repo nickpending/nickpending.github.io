@@ -1,10 +1,10 @@
 # _config.yml
 remote_theme: tajacks/lightspeed
-title: My Blog
-description: Welcome to my personal blog
+title: "The Lab"
+description: "Security research, tools, and random observations"
 author:
-  name: Your Name
-  email: your.email@example.com
+  name: nickpending
+  bio: "Security engineer focused on building tools and breaking things. Into data analysis, problem-solving, BJJ, philosophy, and music production."
 
 # Enable various plugins and features
 plugins:
