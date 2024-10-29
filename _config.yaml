@@ -1,0 +1,29 @@
+# _config.yml
+remote_theme: tajacks/lightspeed
+title: My Blog
+description: Welcome to my personal blog
+author:
+  name: Your Name
+  email: your.email@example.com
+
+# Enable various plugins and features
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Site configuration
+url: "https://nickpending.github.io"
+baseurl: ""
+
+# Theme-specific settings
+social_links:
+  github: nickpending
+  # Add other social media as needed
+  # twitter: yourhandle
+  # linkedin: yourprofile
+
+# Navigation
+header_pages:
+  - about.md
+  - archive.md
