@@ -1,36 +1,18 @@
+# Site Specific Configuration
+name: "The Lab"
+description: "Security research, tools, and random observations"
+url: "https://nickpending.github.io"
+author: nickpending
+timezone: America/New_York
+
 # Theme Configuration
 remote_theme: tajacks/lightspeed
-title: "The Lab"
-description: "Security research, tools, and random observations"
-
-# Site Configuration
-url: "https://nickpending.github.io"
-baseurl: ""
 
 # Plugin Configuration
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
-
-# Author Configuration
-author:
-  name: nickpending
-  bio: "Security engineer focused on building tools and breaking things. Into data analysis, problem-solving, BJJ, philosophy, and music production."
-
-# Header Configuration
-header:
-  title: "The Lab"
-  headline: "Security research and analysis"
-  description: "Security research, tools, and random observations"
-  
-navigation:
-  - title: "Home"
-    url: "/"
-  - title: "Posts"
-    url: "/posts/"
-  - title: "About"
-    url: "/about/"
 
 # Collections Configuration
 collections:
