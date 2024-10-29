@@ -11,6 +11,17 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Theme configuration
+theme_config:
+  appearance: "auto"  # or "dark" or "light"
+  back_home_text: "← Home"
+  date_format: "%Y-%m-%d"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
 # Site configuration
 url: "https://nickpending.github.io"
 baseurl: ""
@@ -25,4 +36,21 @@ social_links:
 # Navigation
 header_pages:
   - about.md
-  - archive.md
+  - posts.md
+
+# Site settings
+url: "https://nickpending.github.io"
+baseurl: ""
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
