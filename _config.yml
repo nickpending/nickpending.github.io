@@ -3,7 +3,15 @@ name: "The Lab"
 description: "Security research, tools, and random observations"
 url: "https://nickpending.github.io"
 author: nickpending
-timezone: America/New_York
+
+# Navigation
+navigation:
+  - name: Home
+    url: /
+  - name: Posts
+    url: /posts/
+  - name: About
+    url: /about/
 
 # Theme Configuration
 remote_theme: tajacks/lightspeed
