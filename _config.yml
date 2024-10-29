@@ -7,7 +7,7 @@ description: "Security research, tools, and random observations"
 url: "https://nickpending.github.io"
 baseurl: ""
 
-# Plugin Configuration (only what GitHub Pages supports)
+# Plugin Configuration
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
@@ -18,11 +18,11 @@ author:
   name: nickpending
   bio: "Security engineer focused on building tools and breaking things. Into data analysis, problem-solving, BJJ, philosophy, and music production."
 
-# Theme Settings
-header:
-  site_title: "The Lab"
-  headline: "Security research and analysis"
-  show_nav: true
+# LightSpeed Theme Specific Settings
+lightspeed:
+  header:
+    name: "The Lab"
+    headline: "Security research and analysis"
   nav:
     - title: "Home"
       url: "/"
