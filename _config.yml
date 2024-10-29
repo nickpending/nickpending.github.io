@@ -1,16 +1,17 @@
 # Site Specific Configuration
+sitename: "The Lab"
 name: "The Lab"
 description: "Security research, tools, and random observations"
 url: "https://nickpending.github.io"
 author: nickpending
 
-# Navigation
-navigation:
-  - name: Home
+# Navigation Links
+nav:
+  - title: Home
     url: /
-  - name: Posts
+  - title: Posts
     url: /posts/
-  - name: About
+  - title: About
     url: /about/
 
 # Theme Configuration
