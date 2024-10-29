@@ -19,29 +19,25 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Lightspeed Theme-specific Configuration
-lightspeed:
-  homepage:
-    title: "The Lab"
-    subtitle: "Security research and analysis"
-  header:
-    title: "The Lab"
-    nav_fields:
-      - name: "Home"
-        path: "/"
-      - name: "Posts"
-        path: "/posts/"
-      - name: "About"
-        path: "/about/"
+# Theme Configuration
+theme_config:
+  site_name: "The Lab"
+  header_text: "Security research and analysis"
+  show_navigation: true
+  navigation:
+    - name: "Home"
+      url: "/"
+    - name: "Posts"
+      url: "/posts/"
+    - name: "About"
+      url: "/about/"
+  social:
+    github: nickpending
 
 # Build Configuration
 markdown: kramdown
 kramdown:
   input: GFM
-
-# Social Links
-social_links:
-  github: nickpending
 
 # Collections Configuration
 collections:
