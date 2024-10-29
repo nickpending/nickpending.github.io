@@ -1,3 +1,4 @@
+# Theme Configuration
 remote_theme: tajacks/lightspeed
 title: "The Lab"
 description: "Security research, tools, and random observations"
@@ -5,31 +6,30 @@ author:
   name: nickpending
   bio: "Security engineer focused on building tools and breaking things. Into data analysis, problem-solving, BJJ, philosophy, and music production."
 
-# Enable various plugins and features
+# Site Configuration
+url: "https://nickpending.github.io"
+baseurl: ""
+
+# Plugin Configuration
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
 
-# Theme configuration
+# Theme-specific Configuration
 theme_config:
   appearance: "auto"  # or "dark" or "light"
   back_home_text: "← Home"
   date_format: "%Y-%m-%d"
 
-# Build settings
+# Build Configuration
 markdown: kramdown
 kramdown:
   input: GFM
 
-# Site configuration
-url: "https://nickpending.github.io"
-baseurl: ""
-
-# Theme-specific settings
+# Social Links
 social_links:
   github: nickpending
-  # Add other social media as needed
   # twitter: yourhandle
   # linkedin: yourprofile
 
@@ -38,16 +38,13 @@ header_pages:
   - about.md
   - posts.md
 
-# Site settings
-url: "https://nickpending.github.io"
-baseurl: ""
-
-# Collections
+# Collections Configuration
 collections:
   posts:
     output: true
     permalink: /posts/:title/
 
+# Default Layout Configuration
 defaults:
   - scope:
       path: ""
