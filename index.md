@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Lab
+title: Voidwire Labs
 ---
 
 ## Welcome
