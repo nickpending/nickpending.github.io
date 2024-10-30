@@ -14,6 +14,13 @@ nav:
   - title: About
     url: /about/
 
+# Analytics (Plausible requires sign-up)
+analytics:
+  plausible:
+    enabled: true
+    site_fqdn: 'labs.voidwire.info'
+    script_source: 'https://plausible.io/js/script.js'
+
 # Theme Configuration
 remote_theme: tajacks/lightspeed
 
