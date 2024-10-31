@@ -72,11 +72,8 @@ Quick note: learned the hard way that you NEED to use `-sm ztls` when using `-ci
 This is where it gets good. Since Censys only shows you what's active, maintaining your own dataset gives you a serious edge:
 
 1. You can generate wordlists based on actual naming patterns. Way more effective than generic subdomain lists when you're targeting specific organizations.
-
 2. Spot dangling CNAMEs by comparing what you see now vs what you've seen before. These are easy to miss if you're only looking at current state.
-
 3. Sometimes old assets stick around longer than they should. Historical data helps you find forgotten dev environments, test systems that never got cleaned up, or old API endpoints that might still be alive.
-
 4. Since the Censys API can't tell you when something first appeared, tracking changes over time requires keeping your own records. It's not perfect, but it's the best we can do with the API's limitations.
 
 ## Setting it up

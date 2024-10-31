@@ -1,44 +1,46 @@
+---
+---
 .post-info {
-  padding-bottom: 30px;
-  margin: 20px 0 5px;
-  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 15px 0 5px;
+  padding-top: 15px;
 }
 
 .post-content {
-  line-height: 35px;
-  padding-bottom: 50px;
+  line-height: 25px;
+  padding-bottom: 35px;
 
   // Basic paragraph spacing
   p {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   // Lists
   ul, ol {
-    margin: 35px 0;
+    margin: 25px 0;
     
     li {
-      line-height: 35px;  // Match the main content line height
+      line-height: 25px;  // Match the main content line height
     }
 
     // Extra space after lists before any next element
     + * {
-      margin-top: 50px;
+      margin-top: 35px;
     }
   }
 
   // Extra space after any element
   > * {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   // Basic header spacing
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   // Code blocks
   pre {
-    margin: 35px 0;
+    margin: 25px 0;
   }
 }
