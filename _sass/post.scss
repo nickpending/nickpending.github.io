@@ -1,50 +1,64 @@
 .post-info {
-    padding-bottom: 30px;
-    margin: 20px 0 5px;
-    padding-top: 20px;
+  padding-bottom: 30px;
+  margin: 20px 0 5px;
+  padding-top: 20px;
+}
+
+.post-content {
+  line-height: 35px;
+  padding-bottom: 50px;
+
+  p {
+    margin-bottom: 35px;
   }
-  
-  .post-content {
-    line-height: 35px;
-    padding-bottom: 50px;
-  
-    // Add more spacing between paragraphs
-    p {
-      margin-bottom: 25px;
-    }
-  
-    // Headers
-    h1, h3 {
-      padding-bottom: 20px;
-      padding-top: 35px;
-    }
-  
-    h2 {
-      padding-bottom: 20px;
-      padding-top: 35px;
-    }
-  
-    // Code blocks
-    pre {
-      padding: 20px;
-      margin: 25px 0;
-    }
-  
-    code {
-      padding: 2px 5px;
-    }
-  
-    // Lists
-    ul, ol {
-      margin: 25px 0;
-      
-      li {
-        margin-bottom: 15px;
-      }
-    }
-  
-    // Add space between sections
-    hr {
-      margin: 35px 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding-top: 35px;
+  }
+
+  pre {
+    padding: 20px;
+    margin: 35px 0;
+    
+    + p, + h1, + h2, + h3, + h4, + h5, + h6 {
+      margin-top: 50px;
     }
   }
+
+  code {
+    padding: 2px 5px;
+  }
+
+  // Enhanced list spacing
+  ul, ol {
+    margin: 35px 0;
+    
+    li {
+      margin-bottom: 15px;
+    }
+
+    // Significantly increase space after lists
+    + p {
+      margin-top: 50px !important;  // Using !important to ensure this spacing takes precedence
+    }
+
+    // Also ensure space before the next header
+    + h1, + h2, + h3, + h4, + h5, + h6 {
+      margin-top: 50px;
+    }
+  }
+
+  hr {
+    margin: 50px 0;
+  }
+
+  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+    margin-top: 50px;
+  }
+
+  > * + * {
+    margin-top: 35px;
+  }
+}
