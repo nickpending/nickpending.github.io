@@ -31,22 +31,35 @@
     padding: 2px 5px;
   }
 
-  // Enhanced list spacing
-  ul, ol {
+  // Numbered lists
+  ol {
     margin: 35px 0;
     
     li {
       margin-bottom: 15px;
     }
 
-    // Significantly increase space after lists
     + p {
-      margin-top: 50px !important;  // Using !important to ensure this spacing takes precedence
+      margin-top: 50px;
+    }
+  }
+
+  // Bullet lists - with extra spacing
+  ul {
+    margin: 35px 0;
+    
+    li {
+      margin-bottom: 15px;
     }
 
-    // Also ensure space before the next header
+    // Much more space after bullet lists
+    + p {
+      margin-top: 70px !important;  // Increased from 50px to 70px
+    }
+
+    // Also ensure good spacing before headers
     + h1, + h2, + h3, + h4, + h5, + h6 {
-      margin-top: 50px;
+      margin-top: 70px;
     }
   }
 
@@ -54,7 +67,7 @@
     margin: 50px 0;
   }
 
-  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+  p + h1, p + h2, p + h3, p + h4, p + h5, + h6 {
     margin-top: 50px;
   }
 
