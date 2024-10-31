@@ -97,7 +97,7 @@ Working on:
 - More filtering options
 - Maybe automate the processing of the json to produce lists?
 
-Code's up on [GitHub](https://github.com/nickpendings/censys-toolkit) if you want to check it out or contribute.
+Code's up on [GitHub](https://github.com/nickpending/censys-toolkit) if you want to check it out or contribute.
 
 ---
 
