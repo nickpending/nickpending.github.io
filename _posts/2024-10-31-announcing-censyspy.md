@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "censyspy: FQDN Discovery via Censys"
-date: 2024-10-29
+date: 2024-10-31
 category: [security,tools]
 ---
 
