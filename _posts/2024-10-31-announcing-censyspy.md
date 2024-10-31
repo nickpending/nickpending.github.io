@@ -109,6 +109,4 @@ Code's up on [GitHub](https://github.com/nickpending/censys-toolkit) if you want
 
 ---
 
-## Standard Disclaimer
-
 *Check out [Censys's API terms](https://censys.io/api-terms-of-service) before you start hammering their API.*
