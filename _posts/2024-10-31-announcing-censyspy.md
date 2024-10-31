@@ -16,7 +16,7 @@ censyspy pulls FQDNs from two Censys data sources:
 1. DNS Records: Grabs FQDNs from forward/reverse DNS lookups
 2. SSL/TLS Certificates: Extracts additional FQDNs from certificate SANs
 
-## 
+##    
 
 Here's where it gets interesting - while Censys is great at showing you what's live right now, there's value in tracking what you find over time. The Censys API doesn't have a "first seen" parameter, so we have to work around that limitation by maintaining our own dataset of discoveries.
 
