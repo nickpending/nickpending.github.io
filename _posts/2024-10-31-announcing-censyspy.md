@@ -78,13 +78,14 @@ Quick note: learned the hard way that you NEED to use `-sm ztls` when using `-ci
 
 ## Why bother saving the data?
 
-This is where it gets good. Since Censys only shows you what's **active**, there's value in tracking what you find over time and maintaining your own dataset. Sure, you can fetch a current list of FQDNs straight from Censys and be done, but if you save this data it can be very useful in the future.
+This is where it gets good. Since Censys only shows you what's **active** (it can't tell you when something first appeared), there's value in tracking what you find over time and maintaining your own dataset. It's not perfect, but it's the best we can do with the API's limitations. Sure, you can fetch a current list of FQDNs straight from Censys and be done, but if you save this data it can be very useful in the future.
 
 1. You can generate wordlists based on actual naming patterns. Way more effective than generic subdomain lists when you're targeting specific organizations.
 2. Spot DNS issues by comparing what you see now vs what you've seen before. These are easy to miss if you're only looking at current state.
 3. Sometimes old assets stick around longer than they should. Historical data helps you find forgotten dev environments, test systems that never got cleaned up, or old API endpoints that might still be alive.
-4. Since the Censys API can't tell you when something first appeared, tracking changes over time requires keeping your own records. It's not perfect, but it's the best we can do with the API's limitations. *Note: the API isn't limited, we just don't have access to that field.
+4. Since the Censys API can't tell you when something first appeared, tracking changes over time requires keeping your own records. 
 
+*Note: the API isn't limited, we just don't have access to that field. *
 ## Setting it up
 
 ```bash
