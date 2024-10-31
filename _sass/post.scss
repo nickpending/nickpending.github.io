@@ -36,7 +36,7 @@
     margin: 35px 0;
     
     li {
-      margin-bottom: 15px;
+      margin-bottom: 5px;  // Reduced from 15px to 5px
     }
 
     + p {
@@ -44,20 +44,18 @@
     }
   }
 
-  // Bullet lists - with extra spacing
+  // Bullet lists
   ul {
     margin: 35px 0;
     
     li {
-      margin-bottom: 15px;
+      margin-bottom: 5px;  // Reduced from 15px to 5px
     }
 
-    // Much more space after bullet lists
     + p {
-      margin-top: 70px !important;  // Increased from 50px to 70px
+      margin-top: 70px !important;
     }
 
-    // Also ensure good spacing before headers
     + h1, + h2, + h3, + h4, + h5, + h6 {
       margin-top: 70px;
     }
