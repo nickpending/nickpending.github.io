@@ -20,3 +20,6 @@ Most posts here will be about:
 * Vulnerability research
 * Random observations about security issues
 * Sometimes, very occasionally, other stuff that interests me
+
+## Contact
+[rudy@voidwire.info](mailto:rudy@voidwire.info)
