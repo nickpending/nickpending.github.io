@@ -85,7 +85,8 @@ This is where it gets good. Since Censys only shows you what's **active** (it ca
 3. Sometimes old assets stick around longer than they should. Historical data helps you find forgotten dev environments, test systems that never got cleaned up, or old API endpoints that might still be alive.
 4. Since the Censys API can't tell you when something first appeared, tracking changes over time requires keeping your own records. 
 
-*Note: the API isn't limited, we just don't have access to that field. *
+*Note: the API isn't limited, we just don't have access to that field.*
+
 ## Setting it up
 
 ```bash
