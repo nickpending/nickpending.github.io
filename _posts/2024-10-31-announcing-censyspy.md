@@ -10,10 +10,12 @@ Built a tool called censyspy that simplifies FQDN discovery via Censys. While yo
 
 ## What's it actually do?
 
-censyspy pulls FQDNs from two Censys data sources:
+censyspy leverages Censys's comprehensive dataset to discover FQDNs in two ways:
 
-1. DNS Records: Grabs FQDNs from forward/reverse DNS lookups
-2. SSL/TLS Certificates: Extracts additional FQDNs from certificate SANs
+1. DNS Records: Finding FQDNs through both forward and reverse DNS lookups
+2. SSL/TLS Certificates: Identifying additional FQDNs from certificate Subject Alternative Names (SANs)
+
+The tool can combine these data sources to provide a more complete picture of your targets.
 
 ## Use
 
