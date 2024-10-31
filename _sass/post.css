@@ -1,0 +1,50 @@
+.post-info {
+    padding-bottom: 30px;
+    margin: 20px 0 5px;
+    padding-top: 20px;
+  }
+  
+  .post-content {
+    line-height: 35px;
+    padding-bottom: 50px;
+  
+    // Add more spacing between paragraphs
+    p {
+      margin-bottom: 25px;
+    }
+  
+    // Headers
+    h1, h3 {
+      padding-bottom: 20px;
+      padding-top: 35px;
+    }
+  
+    h2 {
+      padding-bottom: 20px;
+      padding-top: 35px;
+    }
+  
+    // Code blocks
+    pre {
+      padding: 20px;
+      margin: 25px 0;
+    }
+  
+    code {
+      padding: 2px 5px;
+    }
+  
+    // Lists
+    ul, ol {
+      margin: 25px 0;
+      
+      li {
+        margin-bottom: 15px;
+      }
+    }
+  
+    // Add space between sections
+    hr {
+      margin: 35px 0;
+    }
+  }
