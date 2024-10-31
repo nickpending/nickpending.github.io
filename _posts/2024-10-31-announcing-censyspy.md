@@ -15,9 +15,6 @@ censyspy pulls FQDNs from two Censys data sources:
 1. DNS Records: Grabs FQDNs from forward/reverse DNS lookups
 2. SSL/TLS Certificates: Extracts additional FQDNs from certificate SANs
 
-
-Here's where it gets interesting - while Censys is great at showing you what's live right now, there's value in tracking what you find over time. The Censys API doesn't have a "first seen" parameter, so we have to work around that limitation by maintaining our own dataset of discoveries.
-
 ## Use
 
 Basic usage is straightforward:
@@ -79,7 +76,7 @@ Quick note: learned the hard way that you NEED to use `-sm ztls` when using `-ci
 
 ## Why bother saving the data?
 
-This is where it gets good. Since Censys only shows you what's **active**, maintaining your own dataset gives you a serious edge:
+This is where it gets good. Since Censys only shows you what's **active**, there's value in tracking what you find over time and maintaining your own dataset. Sure, you can fetch a current list of FQDNs straight from Censys and be done, but if you save this data it can be very useful in the future.
 
 1. You can generate wordlists based on actual naming patterns. Way more effective than generic subdomain lists when you're targeting specific organizations.
 2. Spot DNS issues by comparing what you see now vs what you've seen before. These are easy to miss if you're only looking at current state.
