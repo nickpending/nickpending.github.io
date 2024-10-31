@@ -5,6 +5,8 @@ date: 2024-10-31
 category: [security,tools]
 ---
 
+# censyspy
+
 Built a tool called censyspy that simplifies FQDN discovery via Censys. While you can absolutely do all of this with the Censys CLI and their query syntax (which isn't particularly complex), this wrapper makes it a bit more straightforward if you're specifically hunting for FQDNs. Since Censys has such a massive certificate dataset, queries can take a few minutes to complete - the tool defaults to a 5-minute timeout which should be enough for most cases.
 
 ## What's it actually do?
@@ -28,6 +30,8 @@ censyspy --data-type both --domain example.com --output initial_scan.json --days
 censyspy --data-type both --domain example.com --output daily_scan.json --days 1
 ```
 
+## Processing the data
+
 The real power comes from what you do with this data over time. By keeping historical records, you can:
 
 - Build wordlists based on how your target actually names things (way better than generic lists)
@@ -42,15 +46,21 @@ Processing the results for actual security work is pretty simple:
 cat results.json | jq -r 'keys[] as $top | .[$top] | keys[]' | sort -u > fqdns.txt
 ```
 
+## Using your data
+
 Once you have your list of fqdns you can feed that into your favorite tools.
 
 I typically pipe the output straight into httpx for an initial survey. It'll probe for HTTP/HTTPS services across a bunch of common ports, grab response headers, titles, and server info. Particularly useful for spotting vhosts and getting a feel for what's running where:
+
+## HTTP Discovery
 
 ```bash
 # Hunt for services with httpx
 cat fqdns.txt | httpx -irh -bp -td -title -vhost -fhr -td -csp-probe -sc -server \
 -ports http:80,8080,8081,8082,8088,https:443,4443,6443,7443,8089,8443,8449,8905,8910,9443
 ```
+
+## TLS Analysis
 
 For TLS analysis, here's an example using tlsx to check for hosts that might be vulnerable to FREAK by testing for export ciphers:
 
@@ -93,6 +103,8 @@ Working on:
 - Better ways to analyze historical data
 - More filtering options
 - Maybe automate the processing of the json to produce lists?
+
+## Where is it?
 
 Code's up on [GitHub](https://github.com/nickpending/censys-toolkit) if you want to check it out or contribute.
 
