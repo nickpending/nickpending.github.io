@@ -11,16 +11,15 @@ Built a tool called censyspy that simplifies FQDN discovery via Censys. While yo
 
 censyspy pulls FQDNs from two Censys data sources:
 
-
 1. DNS Records: Grabs FQDNs from forward/reverse DNS lookups
 2. SSL/TLS Certificates: Extracts additional FQDNs from certificate SANs
-
 
 Here's where it gets interesting - while Censys is great at showing you what's live right now, there's value in tracking what you find over time. The Censys API doesn't have a "first seen" parameter, so we have to work around that limitation by maintaining our own dataset of discoveries.
 
 ## Use
 
 Basic usage is straightforward:
+
 ```bash
 # Initial data grab
 censyspy --data-type both --domain example.com --output initial_scan.json --days all
@@ -29,22 +28,21 @@ censyspy --data-type both --domain example.com --output initial_scan.json --days
 censyspy --data-type both --domain example.com --output daily_scan.json --days 1
 ```
 
-
 The real power comes from what you do with this data over time. By keeping historical records, you can:
+
 - Build wordlists based on how your target actually names things (way better than generic lists)
 - Spot DNS issues by comparing current vs historical records
 - Track how infrastructure changes
 - Find forgotten assets that might not show up in current scans
 
-
 Processing the results for actual security work is pretty simple:
+
 ```bash
 # Get a clean list of FQDNs
 cat results.json | jq -r 'keys[] as $top | .[$top] | keys[]' | sort -u > fqdns.txt
 ```
 
 Once you have your list of fqdns you can feed that into your favorite tools.
-
 
 I typically pipe the output straight into httpx for an initial survey. It'll probe for HTTP/HTTPS services across a bunch of common ports, grab response headers, titles, and server info. Particularly useful for spotting vhosts and getting a feel for what's running where:
 
@@ -54,7 +52,6 @@ cat fqdns.txt | httpx -irh -bp -td -title -vhost -fhr -td -csp-probe -sc -server
 -ports http:80,8080,8081,8082,8088,https:443,4443,6443,7443,8089,8443,8449,8905,8910,9443
 ```
 
-
 For TLS analysis, here's an example using tlsx to check for hosts that might be vulnerable to FREAK by testing for export ciphers:
 
 ```bash
@@ -62,7 +59,7 @@ For TLS analysis, here's an example using tlsx to check for hosts that might be 
 cat fqdns.txt | tlsx -ci TLS_RSA_EXPORT_WITH_RC4_40_MD5,TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5,\
 TLS_RSA_EXPORT_WITH_DES40_CBC_SHA,TLS_DH_ANON_EXPORT_WITH_RC4_40_MD5,\
 TLS_DH_ANON_EXPORT_WITH_DES40_CBC_SHA,TLS_KRB5_EXPORT_WITH_RC4_40_SHA,\
-TLS_KRB5_EXPORT_WITH_RC4_40_MD5,TLS_KRB5_EXPORT_WITH_RC2_CBC_40_SHA,\
+TLS_KRB5_EXPORT_WITH_RC4_40_MD5,TLS_KRB5_EXPORT_WITH_RC2_CBC_40_MD5,\
 TLS_KRB5_EXPORT_WITH_RC2_CBC_40_MD5,TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA,\
 TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5 \
 -c 5 -sm ztls -tps -tv -p 433 -cipher
@@ -70,11 +67,9 @@ TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5 \
 
 Quick note: learned the hard way that you NEED to use `-sm ztls` when using `-ci`. If you don't, it defaults to auto and completely ignores your cipher list, which can be... frustrating to debug.
 
-
 ## Why bother saving the data?
 
 This is where it gets good. Since Censys only shows you what's active, maintaining your own dataset gives you a serious edge:
-
 
 1. You can generate wordlists based on actual naming patterns. Way more effective than generic subdomain lists when you're targeting specific organizations.
 
@@ -97,13 +92,12 @@ You'll need API creds from Censys (https://censys.io/api).
 ## What's next?
 
 Working on:
+
 - Better ways to analyze historical data
 - More filtering options
 - Support for other Censys search types
 
-
 Code's up on [GitHub](https://github.com/nickpendings/censys-toolkit) if you want to check it out or contribute.
-
 
 ---
 
