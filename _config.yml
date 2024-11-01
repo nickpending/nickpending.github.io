@@ -14,8 +14,8 @@ nav:
   - title: About
     url: /about/
 
-# Keywords
-keywords: ['security', 'cybersecurity', 'osint', 'tools', 'tactics']
+# Keywords - important for SEO
+keywords: ['security', 'cybersecurity', 'osint', 'security research', 'vulnerability analysis', 'cybersecurity tools', 'penetration testing', 'security tools']
 
 # Analytics (Plausible requires sign-up)
 analytics:
@@ -32,6 +32,9 @@ plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+
 
 # Collections Configuration
 collections:

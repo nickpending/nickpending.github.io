@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://labs.voidwire.info/sitemap.xml
