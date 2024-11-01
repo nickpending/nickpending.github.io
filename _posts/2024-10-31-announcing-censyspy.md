@@ -15,7 +15,7 @@ censyspy leverages Censys's comprehensive dataset to discover FQDNs in two ways:
 1. DNS Records: Finding FQDNs through both forward and reverse DNS lookups
 2. SSL/TLS Certificates: Identifying additional FQDNs from certificate Subject Alternative Names (SANs)
 
-The tool can combine these data sources to provide a more complete picture of your targets.
+The tool can combine these data sources to provide a more complete picture of your targets. We have the `--days` feature so we can sortakinda get at *"what's new"* data. It's not perfect, but it's workable given the API limitations. *Note: the API isn't limited, Censys just doesn't expose a `first_seen` parameter for us to use*
 
 ## Use
 
@@ -78,14 +78,12 @@ Quick note: learned the hard way that you NEED to use `-sm ztls` when using `-ci
 
 ## Why bother saving the data?
 
-This is where it gets good. Since Censys only shows you what's **active** (it can't tell you when something first appeared), there's value in tracking what you find over time and maintaining your own dataset. It's not perfect, but it's the best we can do with the API's limitations. Sure, you can fetch a current list of FQDNs straight from Censys and be done, but if you save this data it can be very useful in the future.
+This is where it gets good. Since Censys only shows you what's *active* at the time of probing, there's value in tracking what you find over time and maintaining your own dataset. Sure, you can fetch a current list of FQDNs straight from Censys and be done, but if you save this data it can be very useful in the future. 
 
 1. You can generate wordlists based on actual naming patterns. Way more effective than generic subdomain lists when you're targeting specific organizations.
 2. Spot DNS issues by comparing what you see now vs what you've seen before. These are easy to miss if you're only looking at current state.
 3. Sometimes old assets stick around longer than they should. Historical data helps you find forgotten dev environments, test systems that never got cleaned up, or old API endpoints that might still be alive.
 4. And more..
-
-*Note: the API isn't limited, we just don't have access to that field.*
 
 ## Setting it up
 
