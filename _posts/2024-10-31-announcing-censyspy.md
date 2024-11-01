@@ -15,7 +15,7 @@ censyspy leverages Censys's comprehensive dataset to discover FQDNs in two ways:
 1. DNS Records: Finding FQDNs through both forward and reverse DNS lookups
 2. SSL/TLS Certificates: Identifying additional FQDNs from certificate Subject Alternative Names (SANs)
 
-The tool can combine these data sources to provide a more complete picture of your targets. We have the `--days` feature so we can sortakinda get at *"what's new"* data. It's not perfect, but it's workable given the API limitations. *Note: the API isn't limited, Censys just doesn't expose a `first_seen` parameter for us to use*
+The tool can combine these data sources to provide a more complete picture of your targets. There is a `--days` feature so you can sortakinda get at *"what's new"* data. It's not perfect, but it's workable given the API limitations. *Note: The API isn't limited, Censys just doesn't expose a `first_seen` parameter for us to use.*
 
 ## Use
 
