@@ -3,23 +3,50 @@
     margin: 20px 0 5px;
     padding-top: 20px;
   }
+  
   .post-content {
     line-height: 35px;
     padding-bottom: 50px;
-  }
-  .post-content h1, h3, code, pre {
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
-  .post-content h2 {
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-  .post-content ul + p,
-  .post-content ol + p {
-    margin-top: 1.0em;
-  }
-  .post-content hr {
-    margin-top: 2em;
-    margin-bottom: .5em;
+  
+    h1, h3, code, pre {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+  
+    h2 {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+  
+    ul + p,
+    ol + p {
+      margin-top: 1.0em;
+    }
+  
+    hr {
+      margin-top: 2em;
+      margin-bottom: .5em;
+    }
+  
+    // New blockquote styles
+    blockquote {
+      margin: 1.5em 0;
+      padding: 1em 1.5em;
+      border-left: 4px solid #666;
+      background-color: #f9f9f9;
+      font-style: italic;
+      
+      p {
+        margin: 0;
+        color: #555;
+      }
+      
+      cite {
+        display: block;
+        margin-top: 0.5em;
+        font-size: 0.9em;
+        color: #777;
+        font-style: normal;
+      }
+    }
   }
