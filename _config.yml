@@ -14,6 +14,9 @@ nav:
   - title: About
     url: /about/
 
+# Keywords
+keywords: ['security', 'cybersecurity', 'osint', 'tools', 'tactics']
+
 # Analytics (Plausible requires sign-up)
 analytics:
   plausible:
@@ -47,3 +50,14 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+# Category Paginating
+autopages:
+  enabled: true
+  categories:
+    title: 'Posts in category :cat'
+    permalink: '/category/:cat'
+    silent: false
+
+# Exclusions
+exclude: [ 'README.md', 'COPYING' ]

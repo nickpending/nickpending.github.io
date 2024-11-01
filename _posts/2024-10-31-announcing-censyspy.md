@@ -3,6 +3,7 @@ layout: post
 title: "censyspy: FQDN Discovery via Censys"
 date: 2024-10-31
 category: [security,tools]
+tags: [security, tools, censys, python, osint]
 ---
 
 Built a tool called censyspy that simplifies FQDN discovery via Censys. While you can absolutely do all of this with the Censys CLI and their query syntax (which isn't particularly complex), this wrapper makes it a bit more straightforward if you're specifically hunting for FQDNs. Since Censys has such a massive certificate dataset, queries can take a few minutes to complete - the tool defaults to a 5-minute timeout which should be enough for most cases.
