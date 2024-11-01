@@ -28,17 +28,40 @@
       margin-bottom: .5em;
     }
   
-    // Dark theme blockquote
+    // Dark theme blockquote with fancy quotes
     blockquote {
       margin: 1.5em 0;
-      padding: 1em 1.5em;
+      padding: 1.5em 2em;
       border: 1px solid rgba(255, 255, 255, 0.1);
       background-color: rgba(255, 255, 255, 0.03);
       border-radius: 4px;
+      position: relative;
+      
+      // Opening quote
+      &::before {
+        content: '"';
+        position: absolute;
+        top: -0.2em;
+        left: 0.2em;
+        font-size: 3em;
+        font-family: Georgia, serif;
+        color: rgba(255, 255, 255, 0.15);
+      }
+      
+      // Closing quote
+      &::after {
+        content: '"';
+        position: absolute;
+        bottom: -0.6em;
+        right: 0.2em;
+        font-size: 3em;
+        font-family: Georgia, serif;
+        color: rgba(255, 255, 255, 0.15);
+      }
       
       p {
         margin: 0;
-        color: rgba(255, 255, 255, 0.9);  // Brighter than normal text
+        color: rgba(255, 255, 255, 0.9);
         font-size: 1.1em;
         line-height: 1.6;
         
