@@ -28,44 +28,30 @@
       margin-bottom: .5em;
     }
   
-    // Enhanced blockquote styles
+    // Dark theme blockquote
     blockquote {
-      margin: 2em 0;
-      padding: 1.5em 2em;
-      border-left: 5px solid #2c3e50;
-      background-color: #f8f9fa;
-      position: relative;
-      
-      // Optional: Add quotation mark
-      &::before {
-        content: '"';
-        position: absolute;
-        top: 0;
-        left: 10px;
-        font-size: 3em;
-        color: rgba(44, 62, 80, 0.1);
-        font-family: Georgia, serif;
-      }
+      margin: 1.5em 0;
+      padding: 1em 1.5em;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.03);
+      border-radius: 4px;
       
       p {
         margin: 0;
-        color: #34495e;
+        color: rgba(255, 255, 255, 0.9);  // Brighter than normal text
         font-size: 1.1em;
         line-height: 1.6;
         
-        // Handle multiple paragraphs within blockquote
         & + p {
           margin-top: 1em;
         }
       }
       
-      // Handle consecutive blockquotes
       & + blockquote {
         margin-top: 1em;
       }
     }
   
-    // Style for lists before blockquotes
     ul, ol {
       & + blockquote {
         margin-top: 1.5em;
