@@ -53,6 +53,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+      image: /assets/images/labs.voidwire.info-preview.svg
 
 # Category Paginating
 autopages:
