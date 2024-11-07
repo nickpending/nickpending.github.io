@@ -104,7 +104,7 @@ Years of hands-on experience in exploitation research and defense have demonstra
 
 The future of vulnerability management lies not in generating more alerts or creating new scoring systems, but in providing better context for the ones we have. This shift won't happen overnight, but it's essential for scaling security operations in an increasingly complex digital landscape.
 
-## Key References
+## References
 
 - FIRST.org CVSS v3.1 Specification: https://www.first.org/cvss/v3.1/specification-document
 - EPSS Documentation and Data: https://www.first.org/epss/
