@@ -3,7 +3,11 @@ sitename: "Voidwire Labs"
 name: "Voidwire Labs"
 description: "Security research, tools, and random observations"
 url: "https://labs.voidwire.info"
-author: nickpending
+baseurl: ""
+author: 
+  name: nickpending
+  github: nickpending
+  mastodon: https://infosec.exchange/@nickpending
 
 # Navigation Links
 nav:
@@ -35,7 +39,6 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
 
-
 # Collections Configuration
 collections:
   posts:
@@ -49,11 +52,22 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      image: /assets/images/labs.voidwire.info-preview.svg
+      author: nickpending
+      lang: en_US
   - scope:
       path: ""
     values:
       layout: "default"
       image: /assets/images/labs.voidwire.info-preview.svg
+      lang: en_US
+
+# SEO Specific Settings
+social:
+  name: nickpending
+  links:
+    - https://github.com/nickpending
+    - https://infosec.exchange/@nickpending
 
 # Category Paginating
 autopages:
@@ -62,6 +76,13 @@ autopages:
     title: 'Posts in category :cat'
     permalink: '/category/:cat'
     silent: false
+
+# Locale and Language
+lang: en_US
+locale: en_US
+
+# Build settings
+markdown: kramdown
 
 # Exclusions
 exclude: [ 'README.md', 'COPYING' ]
