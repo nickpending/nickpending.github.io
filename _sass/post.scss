@@ -8,12 +8,14 @@
   line-height: 35px;
   padding-bottom: 50px;
 
-  /* Add spacing between paragraphs */
+  /* More aggressive paragraph spacing */
   p {
-    margin: 0;
-    & + p {
-      margin-top: 1.5em;  /* Increased from your original spacing */
-    }
+    margin-bottom: 2em !important;  /* Force spacing with !important */
+  }
+
+  /* Reset margin for last paragraph in a section */
+  p:last-child {
+    margin-bottom: 0;
   }
 
   h1, h3, code, pre {
@@ -24,6 +26,7 @@
   h2 {
     padding-bottom: 20px;
     padding-top: 20px;
+    margin-top: 2em;  /* Added spacing above headings */
   }
 
   ul + p,
@@ -36,7 +39,6 @@
     margin-bottom: .5em;
   }
 
-  /* Dark theme blockquote with fancy quotes */
   blockquote {
     margin: 1.5em 0;
     padding: 1.5em 2em;
@@ -45,7 +47,6 @@
     border-radius: 4px;
     position: relative;
 
-    /* Opening quote */
     &::before {
       content: '"';
       position: absolute;
@@ -56,7 +57,6 @@
       color: rgba(255, 255, 255, 0.15);
     }
 
-    /* Closing quote */
     &::after {
       content: '"';
       position: absolute;
@@ -83,6 +83,7 @@
   }
 
   ul, ol {
+    margin-bottom: 2em;  /* Added spacing after lists */
     & + blockquote {
       margin-top: 1.5em;
     }
