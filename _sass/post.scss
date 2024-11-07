@@ -8,11 +8,11 @@
   line-height: 35px;
   padding-bottom: 50px;
 
-  /* Add spacing between paragraphs */
+  /* Reduced spacing between paragraphs */
   p {
     margin: 0;
     & + p {
-      margin-top: 1.5em;  /* Increased from your original spacing */
+      margin-top: 1em;  /* Reduced from 1.5em to 1em */
     }
   }
 
@@ -36,7 +36,6 @@
     margin-bottom: .5em;
   }
 
-  /* Dark theme blockquote with fancy quotes */
   blockquote {
     margin: 1.5em 0;
     padding: 1.5em 2em;
@@ -45,7 +44,6 @@
     border-radius: 4px;
     position: relative;
 
-    /* Opening quote */
     &::before {
       content: '"';
       position: absolute;
@@ -56,7 +54,6 @@
       color: rgba(255, 255, 255, 0.15);
     }
 
-    /* Closing quote */
     &::after {
       content: '"';
       position: absolute;
@@ -73,7 +70,7 @@
       font-size: 1.1em;
       line-height: 1.6;
       & + p {
-        margin-top: 1em;
+        margin-top: 0.75em;  /* Reduced spacing within blockquotes */
       }
     }
 
