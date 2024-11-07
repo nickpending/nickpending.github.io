@@ -1,83 +1,90 @@
 .post-info {
-    padding-bottom: 30px;
-    margin: 20px 0 5px;
+  padding-bottom: 30px;
+  margin: 20px 0 5px;
+  padding-top: 20px;
+}
+
+.post-content {
+  line-height: 35px;
+  padding-bottom: 50px;
+
+  /* Add spacing between paragraphs */
+  p {
+    margin: 0;
+    & + p {
+      margin-top: 1.5em;  /* Increased from your original spacing */
+    }
+  }
+
+  h1, h3, code, pre {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  h2 {
+    padding-bottom: 20px;
     padding-top: 20px;
   }
-  
-  .post-content {
-    line-height: 35px;
-    padding-bottom: 50px;
-  
-    h1, h3, code, pre {
-      padding-bottom: 10px;
-      padding-top: 10px;
+
+  ul + p,
+  ol + p {
+    margin-top: 1.0em;
+  }
+
+  hr {
+    margin-top: 2em;
+    margin-bottom: .5em;
+  }
+
+  /* Dark theme blockquote with fancy quotes */
+  blockquote {
+    margin: 1.5em 0;
+    padding: 1.5em 2em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    position: relative;
+
+    /* Opening quote */
+    &::before {
+      content: '"';
+      position: absolute;
+      top: -0.2em;
+      left: 0.2em;
+      font-size: 3em;
+      font-family: Georgia, serif;
+      color: rgba(255, 255, 255, 0.15);
     }
-  
-    h2 {
-      padding-bottom: 20px;
-      padding-top: 20px;
+
+    /* Closing quote */
+    &::after {
+      content: '"';
+      position: absolute;
+      bottom: -0.6em;
+      right: 0.2em;
+      font-size: 3em;
+      font-family: Georgia, serif;
+      color: rgba(255, 255, 255, 0.15);
     }
-  
-    ul + p,
-    ol + p {
-      margin-top: 1.0em;
-    }
-  
-    hr {
-      margin-top: 2em;
-      margin-bottom: .5em;
-    }
-  
-    // Dark theme blockquote with fancy quotes
-    blockquote {
-      margin: 1.5em 0;
-      padding: 1.5em 2em;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background-color: rgba(255, 255, 255, 0.03);
-      border-radius: 4px;
-      position: relative;
-      
-      // Opening quote
-      &::before {
-        content: '"';
-        position: absolute;
-        top: -0.2em;
-        left: 0.2em;
-        font-size: 3em;
-        font-family: Georgia, serif;
-        color: rgba(255, 255, 255, 0.15);
-      }
-      
-      // Closing quote
-      &::after {
-        content: '"';
-        position: absolute;
-        bottom: -0.6em;
-        right: 0.2em;
-        font-size: 3em;
-        font-family: Georgia, serif;
-        color: rgba(255, 255, 255, 0.15);
-      }
-      
-      p {
-        margin: 0;
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 1.1em;
-        line-height: 1.6;
-        
-        & + p {
-          margin-top: 1em;
-        }
-      }
-      
-      & + blockquote {
+
+    p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1em;
+      line-height: 1.6;
+      & + p {
         margin-top: 1em;
       }
     }
-  
-    ul, ol {
-      & + blockquote {
-        margin-top: 1.5em;
-      }
+
+    & + blockquote {
+      margin-top: 1em;
     }
   }
+
+  ul, ol {
+    & + blockquote {
+      margin-top: 1.5em;
+    }
+  }
+}
