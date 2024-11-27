@@ -9,10 +9,10 @@ tags: [ai, python, text-to-speech, development, claude, elevenlabs]
 
 While building my own JARVIS-like assistant (yes, another one of those), I noticed something: AI output is perfectly readable as text, but throw it at a text-to-speech system and... well, let's just say it's not winning any audiobook awards.
 
-Here's what I mean. Take this perfectly clear security scan output from Claude:
+Here's what I mean. Take this perfectly clear output from Claude:
 
 ```
-Based on the Censys data, the IP 130.35.229.127 is running both HTTP (port 80) and HTTPS (port 443) services. The server is returning 404 responses on both ports, with standard security headers like Cache-Control and X-Content-Type-Options.
+The server at IP 130.35.229.127 is running HTTP/443
 ```
 
 Read that with your eyes? No problem! Crystal clear. But have your TTS system read it out loud and suddenly your technical briefing sounds like a robot having a stroke.
@@ -25,7 +25,7 @@ Maybe there are better solutions out there (wouldn't be surprised), but I went a
 from sayable import SayableAssistant
 
 assistant = SayableAssistant()
-text = "Based on the Censys data, the IP 130.35.229.127 is running..."
+text = "The server at IP 130.35.229.127 is running HTTP/443"
 speakable = assistant.transform(text)
 ```
 
