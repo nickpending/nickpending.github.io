@@ -188,58 +188,15 @@ By systematically working through these steps, security teams can better underst
 And yes - this requires real analysis work, not just accepting a CVSS score and running with it. But that's exactly what proper security prioritization demands.
 
 ## Conclusion
+This analysis challenges the security industry's conventional response to TLS protocol vulnerabilities. Through detailed examination of major vulnerabilities across multiple protocol versions, three key findings emerge:
+First, the network position required for executing protocol attacks typically grants attackers access to far simpler and more reliable attack methods. When an attacker achieves the necessary position, they rarely choose complex protocol exploits when basic MITM techniques would suffice.
+Second, successful protocol exploitation often requires specific conditions that rarely align in practice. Even "critical" vulnerabilities like BEAST, POODLE, and Sweet32 have been effectively neutralized by widespread mitigations in modern browsers and libraries.
+Third, the industry's version-focused response appears driven more by compliance requirements and the psychological comfort of measurable metrics than practical risk reduction. Organizations gravitate toward TLS version upgrades because they provide concrete, measurable actions - creating an illusion of enhanced security while potentially leaving fundamental weaknesses unaddressed.
+Based on these findings, organizations should:
 
-This analysis challenges the security industry's conventional response to TLS protocol vulnerabilities. Through detailed examination of major vulnerabilities across multiple protocol versions, we find that standardized risk scoring often fails to capture the practical exploitation challenges and real-world context. Three key findings emerge:
+Prioritize preventing hostile network positions through strong segmentation and architectural controls
+Strengthen fundamental controls like certificate validation and monitoring
+Treat protocol upgrades as routine maintenance rather than emergency fixes
+Develop metrics that align with actual security outcomes rather than simple compliance checks
 
-First, the network position required for executing protocol attacks typically grants attackers access to far simpler and more reliable attack methods. When an attacker achieves the necessary network position to execute a protocol-level attack, they rarely choose to pursue complex exploitation paths when basic MITM techniques or certificate manipulation would suffice. This reality suggests that organizations may be over-investing in protocol security while under-investing in position prevention.
-
-Second, the technical prerequisites for successful protocol exploitation often make these attacks impractical in real-world scenarios. As demonstrated through our analysis of public WiFi and server-to-server communications, even "critical" vulnerabilities like BEAST, POODLE, and Sweet32 require specific conditions that are rarely aligned in practice. Moreover, widespread mitigations in modern browsers and libraries have effectively neutralized many of these attacks, though they continue to drive urgent upgrade requirements.
-
-Third, the industry's version-focused response appears driven more by compliance requirements and the psychological comfort of measurable security metrics than by practical risk reduction. Organizations and security teams gravitate toward TLS version upgrades because they provide concrete, measurable actions that create an illusion of enhanced security. This bias toward quantifiable "improvements" often overshadows more complex but necessary security controls that lack easy metrics.
-
-Based on these findings, organizations should adopt a more nuanced approach to TLS security:
-
-1. Prioritize Position Prevention
-   - Implement strong network segmentation
-   - Deploy automated position detection capabilities
-   - Invest in architectural controls that prevent MITM scenarios
-   - Focus on securing critical network boundaries
-
-2. Strengthen Fundamental Controls
-   - Enforce strict certificate validation policies
-   - Implement certificate pinning for critical services
-   - Deploy custom trust stores for server-to-server communication
-   - Monitor for certificate-based attacks
-
-3. Contextualize Protocol Security
-   - Evaluate TLS vulnerabilities using the three-step methodology presented
-   - Consider protocol upgrades as maintenance rather than emergency fixes
-   - Align upgrade timing with broader system modernization efforts
-   - Balance compliance requirements with practical security needs
-
-4. Improve Risk Assessment
-   - Apply systematic analysis to vulnerability scoring
-   - Consider full exploitation prerequisites
-   - Evaluate practical attack scenarios
-   - Account for existing mitigations and controls
-
-5. Enhance Detection Capabilities
-   - Monitor for network position compromise
-   - Deploy certificate transparency monitoring
-   - Implement automated protocol downgrade detection
-   - Track unusual certificate presentation patterns
-
-The evidence suggests that while TLS protocol security remains important, its practical impact on system security often differs significantly from standard vulnerability assessments. Organizations must resist the psychological pull of simple version upgrades and checklist security. While these actions feel productive and create measurable metrics for security dashboards, they can provide a false sense of security while leaving fundamental weaknesses unaddressed.
-
-This research calls for a broader re-evaluation of how the security industry assesses and responds to protocol-level vulnerabilities. The methodology demonstrated here - analyzing position requirements, technical prerequisites, and available alternatives - provides a framework for more realistic vulnerability assessment that could be applied beyond TLS to other protocol security issues.
-
-Moving forward, the industry needs to evolve beyond simple version requirements and the comfort of checkbox security. Understanding why organizations consistently prioritize protocol upgrades - despite limited evidence of exploitation - reveals how psychological factors influence security decisions. Security teams often choose actions that demonstrate visible progress over those that provide substantial but less measurable protection.
-
-Real security improvement requires organizations to:
-- Acknowledge the psychological bias toward measurable but potentially less impactful security actions
-- Recognize that feeling more secure does not equate to being more secure
-- Focus resources on preventing and detecting hostile network positions
-- Treat protocol upgrades as routine maintenance rather than emergency security fixes
-- Develop metrics that better align with actual security outcomes rather than simple compliance checks
-
-Only by understanding both the technical realities of protocol security and the psychological factors driving security decisions can organizations make truly informed choices about security priorities and resource allocation.
+The methodology demonstrated here - analyzing position requirements, technical prerequisites, and available alternatives - provides a framework for more realistic vulnerability assessment that extends beyond TLS to other protocol security issues.
