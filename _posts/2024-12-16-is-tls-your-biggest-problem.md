@@ -6,7 +6,7 @@ category: [security]
 tags: [security, tls, ssl, infosec, vulnerabilities, risk-assessment, network-security]
 ---
 
-The security industry consistently responds to [SSL/TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol vulnerabilities with calls for urgent version upgrades, suggesting severe and immediate risk. However, the vast majority of these vulnerabilities share a critical prerequisite: attackers must first achieve specific network positions. When attackers gain such positions, they typically have access to simpler and more reliable attack methods. Additionally, by analyzing technical requirements, modern mitigations, and practical attack scenarios across multiple protocol versions (SSL 3.0 through TLS 1.1), we uncover a significant disconnect between these protocol vulnerabilities, their practical risk, and how organizations seemingly over-respond.
+The security industry's standard response to [SSL/TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol vulnerabilities drives organizations into urgent version upgrades, suggesting severe and immediate risk. However, the vast majority of these vulnerabilities share an major prerequisite: attackers must first achieve specific network positions. When attackers gain such positions, they typically have access to simpler and more reliable attack methods. Additionally, by analyzing technical requirements, modern mitigations, and practical attack scenarios across multiple protocol versions (SSL 3.0 through TLS 1.1), we uncover a significant disconnect between these protocol vulnerabilities, their practical risk, and how organizations seemingly over-respond.
 
 Three critical factors determine the real-world impact of any TLS protocol vulnerability:
 
