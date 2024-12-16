@@ -5,12 +5,10 @@ date: 2024-12-16
 category: [security]
 tags: [security, tls, ssl, infosec, vulnerabilities, risk-assessment, network-security]
 ---
-
-## Introduction
-
 The security industry consistently responds to SSL/TLS protocol vulnerabilities with calls for urgent version upgrades, suggesting severe and immediate risk. However, the vast majority of these vulnerabilities share a critical prerequisite: attackers must first achieve specific network positions. When attackers gain such positions, they typically have access to simpler and more reliable attack methods. Additionally, by analyzing technical requirements, modern mitigations, and practical attack scenarios across multiple protocol versions (SSL 3.0 through TLS 1.1), we uncover a significant disconnect between these protocol vulnerabilities, their practical risk, and how organizations seemingly over-respond.
 
 Three critical factors determine the real-world impact of any TLS protocol vulnerability:
+
 1. The network position required to execute the attack
 2. The technical prerequisites that must be met
 3. The existence of simpler attacks available to attackers who achieve the necessary position
